@@ -1,0 +1,3895 @@
+// Boundary
+[
+    {
+        "id": "Village Map-Outline",
+        "type": "line",
+        "source": "ccc69c10-d648-4f06-a0f8-64d49cb8c030",
+        "source-layer": "TL_Boundary",
+        "minzoom": 14,
+        "maxzoom": 22,
+        "filter": [
+            "==",
+            [
+                "geometry-type"
+            ],
+            "Polygon"
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                14.9,
+                "hsl(0, 0%, 0%)",
+                15,
+                "hsl(0, 0%, 100%)"
+            ],
+            "line-width": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                14,
+                2.5,
+                15,
+                3
+            ],
+            "line-dasharray": [
+                2,
+                4
+            ]
+        }
+    },
+    {
+        "id": "Village Map",
+        "type": "fill",
+        "source": "ccc69c10-d648-4f06-a0f8-64d49cb8c030",
+        "source-layer": "TL_Boundary",
+        "minzoom": 14,
+        "maxzoom": 22,
+        "filter": [
+            "==",
+            [
+                "geometry-type"
+            ],
+            "Polygon"
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "fill-color": "hsla(185, 44%, 95%, 0.1)"
+        }
+    },
+    {
+        "id": "Ward Maps-Outline",
+        "type": "line",
+        "source": "81ee52d8-f97e-4f1a-96bb-786c4e2fa39e",
+        "source-layer": "TL_Boundary",
+        "minzoom": 14,
+        "maxzoom": 16,
+        "filter": [
+            "==",
+            [
+                "geometry-type"
+            ],
+            "Polygon"
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": "hsl(250, 59%, 52%)",
+            "line-width": 2
+        }
+    },
+    {
+        "id": "Ward Maps",
+        "type": "fill",
+        "source": "81ee52d8-f97e-4f1a-96bb-786c4e2fa39e",
+        "source-layer": "TL_Boundary",
+        "minzoom": 14,
+        "maxzoom": 15,
+        "filter": [
+            "==",
+            [
+                "geometry-type"
+            ],
+            "Polygon"
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "fill-color": "hsla(0, 0%, 0%, 0.005)"
+        }
+    },
+    {
+        "id": "Survey Number Maps",
+        "type": "fill",
+        "source": "ebfa1da9-f21a-4851-a416-7c7e65baf118",
+        "source-layer": "TL_Boundary",
+        "minzoom": 14,
+        "maxzoom": 21,
+        "filter": [
+            "==",
+            [
+                "geometry-type"
+            ],
+            "Polygon"
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "fill-color": "hsla(220, 65%, 50%, 0.6)"
+        }
+    },
+    {
+        "id": "Survey Number-Outline",
+        "type": "line",
+        "source": "ebfa1da9-f21a-4851-a416-7c7e65baf118",
+        "source-layer": "TL_Boundary",
+        "minzoom": 14,
+        "maxzoom": 22,
+        "filter": [
+            "==",
+            [
+                "geometry-type"
+            ],
+            "Polygon"
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": "hsl(0, 0%, 100%)",
+            "line-width": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                15,
+                2,
+                17,
+                2.5
+            ]
+        }
+    },
+    {
+        "id": "Ward Maps-Annotation",
+        "type": "symbol",
+        "source": "81ee52d8-f97e-4f1a-96bb-786c4e2fa39e",
+        "source-layer": "TL_Boundary",
+        "minzoom": 14,
+        "maxzoom": 22,
+        "filter": [
+            "==",
+            [
+                "geometry-type"
+            ],
+            "Point"
+        ],
+        "layout": {
+            "text-font": [
+                "Roboto Bold",
+                "Noto Sans Bold"
+            ],
+            "text-size": 14,
+            "text-field": [
+                "concat",
+                [
+                    "to-string",
+                    [
+                        "get",
+                        "ward_number"
+                    ]
+                ],
+                " - ",
+                " ",
+                "",
+                [
+                    "get",
+                    "name"
+                ],
+                ""
+            ],
+            "visibility": "visible"
+        },
+        "paint": {
+            "icon-color": "hsl(250, 59%, 52%)",
+            "text-color": "hsl(250, 59%, 52%)",
+            "icon-halo-blur": 1,
+            "text-halo-blur": 1,
+            "icon-halo-color": "rgba(255, 255, 255, 1)",
+            "icon-halo-width": 1,
+            "text-halo-color": "rgba(255, 255, 255, 1)",
+            "text-halo-width": 1
+        }
+    },
+    {
+        "id": "Survey Number-Annotation",
+        "type": "symbol",
+        "source": "ebfa1da9-f21a-4851-a416-7c7e65baf118",
+        "source-layer": "TL_Boundary",
+        "minzoom": 15,
+        "maxzoom": 22,
+        "filter": [
+            "==",
+            [
+                "geometry-type"
+            ],
+            "Point"
+        ],
+        "layout": {
+            "text-font": [
+                "Roboto Medium",
+                "Noto Sans Regular"
+            ],
+            "text-size": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                15,
+                9,
+                16,
+                12,
+                18,
+                14
+            ],
+            "text-field": "{name}",
+            "text-overlap": "cooperative",
+            "text-padding": 3,
+            "text-line-height": 1.2,
+            "icon-keep-upright": true,
+            "symbol-avoid-edges": true,
+            "text-allow-overlap": true,
+            "text-letter-spacing": 0,
+            "text-ignore-placement": true,
+            "visibility": "visible"
+        },
+        "paint": {
+            "icon-color": "hsl(0, 0%, 0%)",
+            "text-color": "hsl(0, 0%, 0%)",
+            "icon-halo-blur": 0,
+            "text-halo-blur": 0,
+            "icon-halo-color": "rgba(255, 255, 255, 1)",
+            "icon-halo-width": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                15,
+                1,
+                16,
+                1.2
+            ],
+            "text-halo-color": "rgba(255, 255, 255, 1)",
+            "text-halo-width": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                15,
+                1,
+                16,
+                1.2
+            ]
+        }
+    },
+    {
+        "id": "Village Map-Annotation",
+        "type": "symbol",
+        "source": "ccc69c10-d648-4f06-a0f8-64d49cb8c030",
+        "source-layer": "TL_Boundary",
+        "minzoom": 14,
+        "maxzoom": 22,
+        "filter": [
+            "==",
+            [
+                "geometry-type"
+            ],
+            "Point"
+        ],
+        "layout": {
+            "text-font": [
+                "Roboto Regular",
+                "Noto Sans Regular"
+            ],
+            "text-size": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                14,
+                14,
+                15,
+                17
+            ],
+            "text-field": "{name}",
+            "visibility": "visible"
+        },
+        "paint": {
+            "icon-color": "hsl(0, 0%, 0%)",
+            "text-color": "hsl(0, 0%, 0%)",
+            "icon-halo-blur": 1.3,
+            "text-halo-blur": 1.3,
+            "icon-halo-color": "rgba(255, 255, 255, 1)",
+            "icon-halo-width": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                14,
+                1,
+                15,
+                2
+            ],
+            "text-halo-color": "rgba(255, 255, 255, 1)",
+            "text-halo-width": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                14,
+                1,
+                15,
+                2
+            ]
+        }
+    }
+]
+
+
+// Infrasturcture
+[
+    {
+        "id": "Smart Cities-Boundaries",
+        "type": "fill",
+        "source": "166ec6f1-2485-46d2-974b-356c39a17bcf",
+        "source-layer": "TL_Infrastructure",
+        "minzoom": 7,
+        "maxzoom": 9,
+        "filter": [
+            "all",
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Smart City"
+                ],
+                true,
+                false
+            ],
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "Polygon"
+            ]
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "fill-color": "hsla(193, 88%, 47%, 0.4)"
+        }
+    },
+    {
+        "id": "Smart Cities-Outline",
+        "type": "line",
+        "source": "166ec6f1-2485-46d2-974b-356c39a17bcf",
+        "source-layer": "TL_Infrastructure",
+        "minzoom": 8,
+        "maxzoom": 9,
+        "filter": [
+            "all",
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Smart City"
+                ],
+                true,
+                false
+            ],
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "Polygon"
+            ]
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": "hsl(193, 88%, 47%)"
+        }
+    },
+    {
+        "id": "Commercial Hub",
+        "type": "fill",
+        "source": "166ec6f1-2485-46d2-974b-356c39a17bcf",
+        "source-layer": "TL_Infrastructure",
+        "minzoom": 9,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Commercial Hub"
+                ],
+                true,
+                false
+            ],
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "Polygon"
+            ]
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "fill-color": "hsla(51, 100%, 94%, 0.8)"
+        }
+    },
+    {
+        "id": "Commercial Hubs-Outline",
+        "type": "line",
+        "source": "166ec6f1-2485-46d2-974b-356c39a17bcf",
+        "source-layer": "TL_Infrastructure",
+        "minzoom": 9,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Commercial Hub"
+                ],
+                true,
+                false
+            ],
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "Polygon"
+            ]
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": "hsl(51, 73%, 46%)",
+            "line-width": 1.5
+        }
+    },
+    {
+        "id": "Commercial Hubs-Annotations",
+        "type": "symbol",
+        "source": "166ec6f1-2485-46d2-974b-356c39a17bcf",
+        "source-layer": "TL_Infrastructure",
+        "minzoom": 12,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Commercial Hub"
+                ],
+                true,
+                false
+            ],
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "Point"
+            ]
+        ],
+        "layout": {
+            "text-font": [
+                "Roboto Medium Italic",
+                "Noto Sans Italic"
+            ],
+            "text-size": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                12,
+                10,
+                14,
+                11,
+                16,
+                12
+            ],
+            "icon-image": [
+                "match",
+                [
+                    "get",
+                    "keyword"
+                ],
+                "Sports City",
+                "Sports sprites",
+                "Grey"
+            ],
+            "text-field": "{name}",
+            "icon-anchor": "bottom",
+            "text-anchor": "top",
+            "visibility": "visible"
+        },
+        "paint": {
+            "icon-color": "hsl(51, 100%, 38%)",
+            "text-color": "hsl(51, 100%, 38%)",
+            "icon-halo-color": "rgba(255, 255, 255, 1)",
+            "icon-halo-width": 1,
+            "text-halo-color": "rgba(255, 255, 255, 1)",
+            "text-halo-width": 1
+        }
+    },
+    {
+        "id": "Smart City",
+        "type": "symbol",
+        "source": "166ec6f1-2485-46d2-974b-356c39a17bcf",
+        "source-layer": "TL_Infrastructure",
+        "minzoom": 7,
+        "maxzoom": 9,
+        "filter": [
+            "all",
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Smart City"
+                ],
+                true,
+                false
+            ],
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "Polygon"
+            ]
+        ],
+        "layout": {
+            "icon-size": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                7,
+                1.2,
+                9,
+                1.4
+            ],
+            "text-font": [
+                "Roboto Medium Italic",
+                "Noto Sans Italic"
+            ],
+            "text-size": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                6,
+                0,
+                9,
+                16
+            ],
+            "icon-image": "Smart city sprites 1",
+            "text-field": "{name}",
+            "icon-anchor": "bottom",
+            "text-anchor": "top",
+            "visibility": "visible"
+        },
+        "paint": {
+            "text-color": "hsl(192, 58%, 43%)",
+            "icon-halo-color": "rgba(255, 255, 255, 1)",
+            "icon-halo-width": 1,
+            "text-halo-color": "rgba(255, 255, 255, 1)",
+            "text-halo-width": 1
+        }
+    }
+]
+
+
+// Landuse
+[
+    {
+        "id": "Proposed-BDA-CDP-Map",
+        "type": "fill",
+        "source": "7133bda4-7ca5-4acd-a0d2-6484b32b795d",
+        "source-layer": "TL_Landuse",
+        "minzoom": 15,
+        "maxzoom": 19,
+        "filter": [
+            "==",
+            [
+                "geometry-type"
+            ],
+            "Polygon"
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "name"
+                ],
+                "Agricultural land",
+                "#7a8ef5",
+                "Commercial business",
+                "#0070ff",
+                "Commercial Center",
+                "#004da8",
+                "Drain",
+                "#73b2ff",
+                "High Tech",
+                "#df73ff",
+                "Industrial",
+                "#b728e3",
+                "LPA of BMICAPA",
+                "#beb5a2",
+                "Lake/Tank",
+                "#00c5ff",
+                "Open Space",
+                "#78ed17",
+                "Public Utlities",
+                "#a87000",
+                "Public/Semi-Public",
+                "#ff0000",
+                "Residential Main",
+                "#ffff00",
+                "Residential Mixed",
+                "#ffaa00",
+                "Road",
+                "#b2b2b2",
+                "State Forest",
+                "#38a800",
+                "Traffic & Transportation",
+                "#686868",
+                "Unclassified Use",
+                "#000000",
+                "#3178cc"
+            ],
+            "fill-opacity": 0.6
+        }
+    },
+    {
+        "id": "ProposedBDACDPMap-Outline",
+        "type": "line",
+        "source": "7133bda4-7ca5-4acd-a0d2-6484b32b795d",
+        "source-layer": "TL_Landuse",
+        "minzoom": 15,
+        "maxzoom": 19,
+        "filter": [
+            "==",
+            [
+                "geometry-type"
+            ],
+            "Polygon"
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": "hsl(0, 0%, 0%)",
+            "line-width": 0.5
+        }
+    },
+    {
+        "id": "Planning Authority Maps",
+        "type": "fill",
+        "source": "5edeb600-abfa-446e-b0f6-c725157c28fb",
+        "source-layer": "TL_Landuse",
+        "minzoom": 10,
+        "maxzoom": 13,
+        "filter": [
+            "==",
+            [
+                "geometry-type"
+            ],
+            "Polygon"
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "fill-color": [
+                "match",
+                [
+                    "get",
+                    "name"
+                ],
+                "Bangalore International Airport Area Planning Authority (BIAAPA)",
+                "#5ccbe4",
+                "Bangalore Metropolitan Region Development Authority(BMRDA)",
+                "#4777ef",
+                "Bangalore Mysore Infrastructure Corridor Area Planning Authority(BMICAPA)",
+                "#c3ec21",
+                "Banglore Development Authority (BDA)",
+                "#A555EC",
+                "Bruhat Bengaluru Mahanagara Palike (BBMP)",
+                "#d3e835",
+                "Delhi Mumbai Industrial Corridor(DMIC)",
+                "#fe992c",
+                "STRR Land Planning Authority(STRR LPA)",
+                "#73eaa6",
+                "Grey"
+            ],
+            "fill-opacity": 0.2
+        }
+    },
+    {
+        "id": "Planning Authority-Outline",
+        "type": "line",
+        "source": "5edeb600-abfa-446e-b0f6-c725157c28fb",
+        "source-layer": "TL_Landuse",
+        "minzoom": 10,
+        "maxzoom": 13,
+        "filter": [
+            "==",
+            [
+                "geometry-type"
+            ],
+            "Polygon"
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-width": 0.3
+        }
+    },
+    {
+        "id": "Industries",
+        "type": "fill",
+        "source": "1f977433-0879-4a20-93f6-930030d2e32c",
+        "source-layer": "TL_Landuse",
+        "minzoom": 9,
+        "maxzoom": 22,
+        "filter": [
+            "==",
+            [
+                "geometry-type"
+            ],
+            "Polygon"
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "fill-color": "hsla(185, 44%, 95%, 0.8)",
+            "fill-antialias": true
+        }
+    },
+    {
+        "id": "Industries-Outline",
+        "type": "line",
+        "source": "1f977433-0879-4a20-93f6-930030d2e32c",
+        "source-layer": "TL_Landuse",
+        "minzoom": 9,
+        "maxzoom": 22,
+        "filter": [
+            "==",
+            [
+                "geometry-type"
+            ],
+            "Polygon"
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-blur": 0,
+            "line-color": "hsl(251, 71%, 67%)",
+            "line-width": 1.5
+        }
+    },
+    {
+        "id": "Industries-Annotation",
+        "type": "symbol",
+        "source": "1f977433-0879-4a20-93f6-930030d2e32c",
+        "source-layer": "TL_Landuse",
+        "minzoom": 11,
+        "maxzoom": 22,
+        "filter": [
+            "==",
+            [
+                "geometry-type"
+            ],
+            "Point"
+        ],
+        "layout": {
+            "text-font": [
+                "PT Sans Bold Italic",
+                "Noto Sans Bold"
+            ],
+            "text-size": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                11,
+                8,
+                13,
+                13,
+                18,
+                16
+            ],
+            "text-field": "{name}",
+            "icon-anchor": "bottom",
+            "text-anchor": "top",
+            "text-overlap": "never",
+            "text-max-width": 9,
+            "icon-keep-upright": true,
+            "symbol-avoid-edges": false,
+            "visibility": "visible"
+        },
+        "paint": {
+            "icon-color": "hsl(251, 71%, 67%)",
+            "text-color": "hsl(251, 71%, 67%)",
+            "text-halo-color": "hsl(189, 0%, 100%)",
+            "text-halo-width": 1.25
+        }
+    }
+]
+
+// transportation
+[
+    {
+        "id": "Metro-Annotation",
+        "type": "symbol",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 14,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Metro"
+                ],
+                true,
+                false
+            ],
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "LineString"
+            ]
+        ],
+        "layout": {
+            "text-font": [
+                "Noto Sans Bold"
+            ],
+            "text-size": 13,
+            "text-field": "{name}",
+            "symbol-placement": "line-center",
+            "icon-keep-upright": true,
+            "visibility": "visible"
+        },
+        "paint": {
+            "icon-color": "hsl(244, 51%, 40%)",
+            "text-color": "hsl(244, 51%, 40%)",
+            "icon-halo-color": "rgba(255, 255, 255, 1)",
+            "icon-halo-width": 1,
+            "text-halo-color": "rgba(255, 255, 255, 1)",
+            "text-halo-width": 1
+        }
+    },
+    {
+        "id": "Water Metro-Operational",
+        "type": "line",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 9,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "LineString"
+            ],
+            [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "sub_category"
+                    ],
+                    [
+                        "Waterways"
+                    ],
+                    true,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "status"
+                    ],
+                    [
+                        "Operational"
+                    ],
+                    true,
+                    false
+                ]
+            ]
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": [
+                "match",
+                [
+                    "get",
+                    "name"
+                ],
+                "Route 6: Vytilla - Kakkanad",
+                "#ff9016",
+                "Route 12: Vypeen - High Court",
+                "#00ae9a",
+                "Grey"
+            ],
+            "line-width": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                8,
+                3,
+                16,
+                4
+            ],
+            "line-gap-width": 0
+        }
+    },
+    {
+        "id": "Water Metro-Underconstruction",
+        "type": "line",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 9,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "LineString"
+            ],
+            [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "sub_category"
+                    ],
+                    [
+                        "Waterways"
+                    ],
+                    true,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "status"
+                    ],
+                    [
+                        "Approved",
+                        "Land Acquisition",
+                        "Partially Operational",
+                        "Planning Stage",
+                        "Planning(DPR)Stage",
+                        "Proposed",
+                        "Under Construction"
+                    ],
+                    true,
+                    [
+                        "!",
+                        [
+                            "has",
+                            "status"
+                        ]
+                    ]
+                ]
+            ]
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": "hsl(225, 67%, 22%)",
+            "line-width": 2.5,
+            "line-dasharray": [
+                1,
+                0.8
+            ]
+        }
+    },
+    {
+        "id": "Water Metro-Label",
+        "type": "symbol",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 10,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "LineString"
+            ],
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Waterways"
+                ],
+                true,
+                false
+            ]
+        ],
+        "layout": {
+            "text-font": [
+                "Roboto Medium Italic",
+                "Noto Sans Italic"
+            ],
+            "text-size": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                9,
+                8,
+                15,
+                12
+            ],
+            "text-field": [
+                "concat",
+                [
+                    "to-string",
+                    [
+                        "get",
+                        "name"
+                    ]
+                ],
+                " - ",
+                " ",
+                "(",
+                [
+                    "get",
+                    "status"
+                ],
+                ")"
+            ],
+            "symbol-placement": "line-center",
+            "icon-keep-upright": true,
+            "visibility": "visible"
+        },
+        "paint": {
+            "icon-halo-color": "rgba(255, 255, 255, 1)",
+            "icon-halo-width": 1,
+            "text-halo-color": "rgba(255, 255, 255, 1)",
+            "text-halo-width": 1
+        }
+    },
+    {
+        "id": "Water Metro-Stations",
+        "type": "symbol",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 10,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "Point"
+            ],
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Waterways Stations"
+                ],
+                true,
+                false
+            ]
+        ],
+        "layout": {
+            "icon-size": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                10,
+                1.3,
+                12,
+                1.5
+            ],
+            "text-font": [
+                "Roboto Black",
+                "Noto Sans Regular"
+            ],
+            "text-size": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                8,
+                8,
+                10,
+                10,
+                12,
+                12
+            ],
+            "icon-image": "ferry",
+            "text-field": "{name}",
+            "icon-anchor": "bottom",
+            "text-anchor": "top",
+            "icon-overlap": "never",
+            "icon-keep-upright": true,
+            "icon-allow-overlap": false,
+            "icon-ignore-placement": false,
+            "visibility": "visible"
+        },
+        "paint": {
+            "text-color": "hsl(214, 100%, 21%)",
+            "icon-halo-color": "rgba(255, 255, 255, 1)",
+            "icon-halo-width": 1,
+            "text-halo-color": "rgba(255, 255, 255, 1)",
+            "text-halo-width": 1
+        }
+    },
+    {
+        "id": "Upcoming Roads",
+        "type": "line",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 3,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Road"
+                ],
+                true,
+                false
+            ],
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "LineString"
+            ]
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                7.9,
+                "hsl(28, 82%, 65%)",
+                8,
+                "hsl(48, 100%, 83%)",
+                22,
+                "hsl(48, 100%, 83%)"
+            ],
+            "line-width": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                3,
+                1,
+                7,
+                2,
+                9,
+                3,
+                18,
+                5
+            ],
+            "line-opacity": 1,
+            "line-gap-width": 0
+        }
+    },
+    {
+        "id": "Upcoming Roads-Outline",
+        "type": "line",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 8,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Road"
+                ],
+                true,
+                false
+            ],
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "LineString"
+            ]
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": "hsl(28, 82%, 65%)",
+            "line-width": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                7,
+                2,
+                10,
+                2.3,
+                18,
+                2.3
+            ],
+            "line-gap-width": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                8,
+                1,
+                9,
+                2,
+                13,
+                4,
+                16,
+                5,
+                18,
+                6
+            ]
+        }
+    },
+    {
+        "id": "Bridges",
+        "type": "line",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 3,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "LineString"
+            ],
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Bridge"
+                ],
+                true,
+                false
+            ]
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                8.9,
+                "hsl(211, 11%, 41%)",
+                9,
+                "hsl(48, 100%, 83%)",
+                22,
+                "hsl(48, 100%, 83%)"
+            ],
+            "line-width": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                3,
+                1,
+                7,
+                2,
+                9,
+                3,
+                18,
+                5
+            ],
+            "line-opacity": 1,
+            "line-gap-width": 0
+        }
+    },
+    {
+        "id": "Bridges-Outline",
+        "type": "line",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 9,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "LineString"
+            ],
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Bridge"
+                ],
+                true,
+                false
+            ]
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                7.9,
+                "hsl(48, 100%, 83%)",
+                8,
+                "hsl(212, 11%, 41%)"
+            ],
+            "line-width": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                7,
+                2,
+                10,
+                2.3,
+                18,
+                2.3
+            ],
+            "line-gap-width": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                8,
+                1,
+                9,
+                2,
+                13,
+                4,
+                16,
+                5,
+                18,
+                6
+            ]
+        }
+    },
+    {
+        "id": "High Speed Railway",
+        "type": "line",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 4,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "High Speed Railway"
+                ],
+                true,
+                false
+            ],
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "LineString"
+            ]
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": "hsl(0, 4%, 54%)",
+            "line-width": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                4,
+                1,
+                22,
+                2
+            ],
+            "line-dasharray": [
+                2,
+                0.8
+            ],
+            "line-gap-width": 0
+        }
+    },
+    {
+        "id": "High Speed Railway-Hatching",
+        "type": "line",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 7,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "High Speed Railway"
+                ],
+                true,
+                false
+            ],
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "LineString"
+            ]
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": "hsl(0, 4%, 54%)",
+            "line-width": [
+                "interpolate",
+                [
+                    "exponential",
+                    1
+                ],
+                [
+                    "zoom"
+                ],
+                9,
+                6,
+                14,
+                7,
+                20,
+                10
+            ],
+            "line-dasharray": [
+                0.2,
+                3
+            ]
+        }
+    },
+    {
+        "id": "Sub-urban Railway-Hatching",
+        "type": "line",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 10,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "LineString"
+            ],
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Railway"
+                ],
+                true,
+                false
+            ]
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": "hsl(0, 3%, 46%)",
+            "line-width": [
+                "interpolate",
+                [
+                    "exponential",
+                    1
+                ],
+                [
+                    "zoom"
+                ],
+                9,
+                6,
+                14,
+                7,
+                20,
+                10
+            ],
+            "line-dasharray": [
+                0.1,
+                3
+            ]
+        }
+    },
+    {
+        "id": "Semi High Speed Railway",
+        "type": "line",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 4,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "LineString"
+            ],
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Semi High Speed Railway"
+                ],
+                true,
+                false
+            ]
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": "hsl(0, 4%, 54%)",
+            "line-width": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                4,
+                1,
+                22,
+                2
+            ],
+            "line-dasharray": [
+                2,
+                0.8
+            ],
+            "line-gap-width": 0
+        }
+    },
+    {
+        "id": "Semi High Speed Railway-Hatching",
+        "type": "line",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 4,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "LineString"
+            ],
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Semi High Speed Railway"
+                ],
+                true,
+                false
+            ]
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": "hsl(0, 4%, 54%)",
+            "line-width": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                4,
+                1,
+                22,
+                2
+            ],
+            "line-dasharray": [
+                2,
+                0.8
+            ],
+            "line-gap-width": 0
+        }
+    },
+    {
+        "id": "Sub-urban Railway",
+        "type": "line",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 9,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "LineString"
+            ],
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Railway"
+                ],
+                true,
+                false
+            ]
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": "hsl(0, 3%, 46%)",
+            "line-width": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                4,
+                1,
+                22,
+                2
+            ],
+            "line-dasharray": [
+                3,
+                0.8
+            ],
+            "line-gap-width": 0
+        }
+    },
+    {
+        "id": "Metro-Underconstruction",
+        "type": "line",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 10,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "LineString"
+            ],
+            [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "sub_category"
+                    ],
+                    [
+                        "Metro"
+                    ],
+                    true,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "status"
+                    ],
+                    [
+                        "Approved",
+                        "Land Acquisition",
+                        "Planning Stage",
+                        "Planning(DPR)Stage",
+                        "Proposed",
+                        "Under Construction"
+                    ],
+                    true,
+                    [
+                        "!",
+                        [
+                            "has",
+                            "status"
+                        ]
+                    ]
+                ]
+            ]
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": [
+                "match",
+                [
+                    "get",
+                    "line_color"
+                ],
+                "Brown",
+                "#673833",
+                "Red",
+                "#db1e2a",
+                "Green",
+                "#33a02c",
+                "Pink",
+                "#f269b9",
+                "Blue",
+                "#0101ff",
+                "Purple",
+                "#973e8a",
+                "Yellow",
+                "#E0E722",
+                "Orange",
+                "#FFA500",
+                "Grey"
+            ],
+            "line-width": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                10,
+                2.5,
+                12,
+                3.2,
+                16,
+                3.3
+            ],
+            "line-dasharray": [
+                2,
+                2
+            ]
+        }
+    },
+    {
+        "id": "Metro-Operational",
+        "type": "line",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 9,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "LineString"
+            ],
+            [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "sub_category"
+                    ],
+                    [
+                        "Metro"
+                    ],
+                    true,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "status"
+                    ],
+                    [
+                        "Operational",
+                        "Partially Operational"
+                    ],
+                    true,
+                    false
+                ]
+            ]
+        ],
+        "layout": {
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": [
+                "match",
+                [
+                    "get",
+                    "line_color"
+                ],
+                "Aqua",
+                "#00ffff",
+                "Green",
+                "#33a02c",
+                "Blue",
+                "#0101ff",
+                "Purple",
+                "#973e8a",
+                "Red",
+                "#db1e2a",
+                "Grey"
+            ],
+            "line-width": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                8,
+                2.5,
+                12,
+                3.2,
+                15,
+                3.4
+            ],
+            "line-offset": 0,
+            "line-gap-width": 0
+        }
+    },
+    {
+        "id": "Upcoming Roads-Annotation",
+        "type": "symbol",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 11,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Road"
+                ],
+                true,
+                false
+            ],
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "LineString"
+            ]
+        ],
+        "layout": {
+            "text-font": [
+                "Roboto Medium Italic",
+                "Noto Sans Italic"
+            ],
+            "text-size": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                13,
+                12.5,
+                14,
+                13,
+                18,
+                14.5,
+                22,
+                15.5
+            ],
+            "text-field": [
+                "concat",
+                [
+                    "to-string",
+                    [
+                        "get",
+                        "name"
+                    ]
+                ],
+                " - ",
+                " ",
+                "(",
+                [
+                    "get",
+                    "status"
+                ],
+                ")"
+            ],
+            "text-offset": [
+                0,
+                0.15
+            ],
+            "text-overlap": "never",
+            "symbol-placement": "line",
+            "icon-keep-upright": true,
+            "visibility": "visible"
+        },
+        "paint": {
+            "icon-color": "hsl(0, 0%, 16%)",
+            "text-color": "hsl(0, 0%, 16%)",
+            "icon-halo-blur": 0.5,
+            "text-halo-blur": 0.5,
+            "icon-halo-color": "rgba(255, 255, 255, 1)",
+            "icon-halo-width": 1,
+            "text-halo-color": "rgba(255, 255, 255, 1)",
+            "text-halo-width": 1
+        }
+    },
+    {
+        "id": "Bridges-Annotation",
+        "type": "symbol",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 8,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "LineString"
+            ],
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Bridges"
+                ],
+                true,
+                false
+            ]
+        ],
+        "layout": {
+            "icon-size": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                8,
+                2,
+                10,
+                1.3,
+                11,
+                0.8,
+                14,
+                1.4,
+                15,
+                2
+            ],
+            "text-font": [
+                "Roboto Medium Italic",
+                "Noto Sans Italic"
+            ],
+            "text-size": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                13,
+                12.5,
+                14,
+                13,
+                18,
+                14.5,
+                22,
+                15.5
+            ],
+            "icon-image": "Bridge sprites 3",
+            "text-field": "{name}",
+            "icon-anchor": "bottom",
+            "text-anchor": "top",
+            "visibility": "visible"
+        }
+    },
+    {
+        "id": "High Speed Railway-Stations",
+        "type": "symbol",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 8,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "Point"
+            ],
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "High Speed Railway-Stations"
+                ],
+                true,
+                false
+            ]
+        ],
+        "layout": {
+            "icon-size": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                7,
+                1.3,
+                10,
+                0.8
+            ],
+            "text-font": [
+                "Roboto Black",
+                "Noto Sans Regular"
+            ],
+            "text-size": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                8,
+                8,
+                10,
+                10,
+                12,
+                12
+            ],
+            "icon-image": "Bullet train Station sprites 2",
+            "text-field": "{name}",
+            "icon-anchor": "bottom",
+            "text-anchor": "top",
+            "icon-overlap": "never",
+            "icon-keep-upright": true,
+            "icon-allow-overlap": false,
+            "icon-ignore-placement": false,
+            "visibility": "visible"
+        },
+        "paint": {
+            "text-color": "hsl(238, 57%, 34%)",
+            "icon-halo-color": "rgba(255, 255, 255, 1)",
+            "icon-halo-width": 1,
+            "text-halo-color": "rgba(255, 255, 255, 1)",
+            "text-halo-width": 1
+        }
+    },
+    {
+        "id": "Sub-Urban Stations",
+        "type": "symbol",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 12,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "Point"
+            ],
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Railway Stations"
+                ],
+                true,
+                false
+            ]
+        ],
+        "layout": {
+            "icon-size": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                12,
+                0.8,
+                14,
+                1.5,
+                18,
+                2.2
+            ],
+            "icon-image": "K ride station 1",
+            "icon-overlap": "never",
+            "icon-keep-upright": true,
+            "icon-allow-overlap": false,
+            "icon-ignore-placement": false,
+            "visibility": "visible"
+        },
+        "paint": {
+            "icon-halo-color": "rgba(255, 255, 255, 1)",
+            "icon-halo-width": 1
+        }
+    },
+    {
+        "id": "Sub-Urban Stations-Label",
+        "type": "symbol",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 12,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "Point"
+            ],
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Railway Stations"
+                ],
+                true,
+                false
+            ]
+        ],
+        "layout": {
+            "text-font": [
+                "Roboto Italic",
+                "Noto Sans Italic"
+            ],
+            "text-size": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                9,
+                11,
+                15,
+                14
+            ],
+            "text-field": "name",
+            "symbol-placement": "line-center",
+            "icon-keep-upright": true,
+            "visibility": "visible"
+        },
+        "paint": {
+            "icon-halo-color": "rgba(255, 255, 255, 1)",
+            "icon-halo-width": 1,
+            "text-halo-color": "rgba(255, 255, 255, 1)",
+            "text-halo-width": 1
+        }
+    },
+    {
+        "id": "Semi High Speed Railway-Label",
+        "type": "symbol",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 9,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "LineString"
+            ],
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Semi High Speed Railway"
+                ],
+                true,
+                false
+            ]
+        ],
+        "layout": {
+            "text-font": [
+                "Roboto Medium Italic",
+                "Noto Sans Italic"
+            ],
+            "text-size": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                9,
+                11,
+                15,
+                14
+            ],
+            "text-field": [
+                "concat",
+                [
+                    "to-string",
+                    [
+                        "get",
+                        "name"
+                    ]
+                ],
+                " - ",
+                " ",
+                "(",
+                [
+                    "get",
+                    "status"
+                ],
+                ")"
+            ],
+            "symbol-placement": "line-center",
+            "icon-keep-upright": true,
+            "visibility": "visible"
+        },
+        "paint": {
+            "icon-halo-color": "rgba(255, 255, 255, 1)",
+            "icon-halo-width": 1,
+            "text-halo-color": "rgba(255, 255, 255, 1)",
+            "text-halo-width": 1
+        }
+    },
+    {
+        "id": "Semi High Speed Railway-Stations",
+        "type": "symbol",
+        "source": "809c7b78-ba4e-407f-894d-c7f15145ac70",
+        "source-layer": "TL_Transportation",
+        "minzoom": 8,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "Point"
+            ],
+            [
+                "match",
+                [
+                    "get",
+                    "sub_category"
+                ],
+                [
+                    "Semi High Speed Railway-Stations"
+                ],
+                true,
+                false
+            ]
+        ],
+        "layout": {
+            "icon-size": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                7,
+                1.3,
+                10,
+                0.8
+            ],
+            "text-font": [
+                "Roboto Black",
+                "Noto Sans Regular"
+            ],
+            "text-size": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                8,
+                8,
+                10,
+                10,
+                12,
+                12
+            ],
+            "icon-image": "Bullet train Station sprites 2",
+            "text-field": "{name}",
+            "icon-anchor": "bottom",
+            "text-anchor": "top",
+            "icon-overlap": "never",
+            "icon-keep-upright": true,
+            "icon-allow-overlap": false,
+            "icon-ignore-placement": false,
+            "visibility": "visible"
+        },
+        "paint": {
+            "text-color": "hsl(238, 57%, 34%)",
+            "icon-halo-color": "rgba(255, 255, 255, 1)",
+            "icon-halo-width": 1,
+            "text-halo-color": "rgba(255, 255, 255, 1)",
+            "text-halo-width": 1
+        }
+    }
+]
+
+// Utility
+[
+    {
+        "id": "Water Pipeline",
+        "type": "line",
+        "source": "40d24d85-7ec5-429a-b0ed-ad76e7cb4e21",
+        "source-layer": "TL_Utility",
+        "minzoom": 14,
+        "maxzoom": 22,
+        "filter": [
+            "==",
+            [
+                "geometry-type"
+            ],
+            "LineString"
+        ],
+        "layout": {
+            "line-cap": "round",
+            "line-join": "round",
+            "line-round-limit": 15,
+            "visibility": "visible"
+        },
+        "paint": {
+            "line-color": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                14.9,
+                "hsl(193, 11%, 72%)",
+                15,
+                "hsl(193, 93%, 47%)"
+            ],
+            "line-width": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                15,
+                1.4,
+                20,
+                5
+            ],
+            "line-gap-width": 0.01
+        }
+    }
+]
+
+// poi
+[
+    {
+        "id": "Upcoming Airports",
+        "type": "symbol",
+        "source": "f9bf1a98-f4df-4fa3-bf0f-ef4b45994083",
+        "source-layer": "TL_poi",
+        "minzoom": 10,
+        "maxzoom": 22,
+        "filter": [
+            "==",
+            [
+                "geometry-type"
+            ],
+            "Point"
+        ],
+        "layout": {
+            "icon-size": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                8,
+                1.3,
+                10,
+                1.4
+            ],
+            "text-font": [
+                "Roboto Italic",
+                "Noto Sans Italic"
+            ],
+            "text-size": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                8,
+                10,
+                10,
+                12
+            ],
+            "icon-image": "Airport sprites",
+            "text-field": "{name}",
+            "icon-anchor": "bottom",
+            "text-anchor": "top",
+            "visibility": "visible"
+        },
+        "paint": {
+            "text-color": "hsl(242, 100%, 48%)",
+            "icon-halo-color": "rgba(255, 255, 255, 1)",
+            "icon-halo-width": 1
+        }
+    },
+    {
+        "id": "TL_Education",
+        "type": "symbol",
+        "source": "v3-openmaptiles",
+        "source-layer": "poi",
+        "metadata": {},
+        "minzoom": 12,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "Point"
+            ],
+            [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "class"
+                    ],
+                    [
+                        "college",
+                        "school",
+                        "university"
+                    ],
+                    true,
+                    [
+                        "fuel",
+                        "grocery",
+                        "hospital",
+                        "restaurant",
+                        "shop"
+                    ],
+                    false,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    [
+                        "college",
+                        "school",
+                        "university"
+                    ],
+                    true,
+                    [
+                        "fuel",
+                        "hospital",
+                        "mall",
+                        "restaurant",
+                        "supermarket"
+                    ],
+                    false,
+                    false
+                ]
+            ]
+        ],
+        "layout": {
+            "icon-size": 1.25,
+            "text-font": [
+                "Roboto Regular",
+                "Noto Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        12,
+                        10
+                    ],
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        22,
+                        14
+                    ]
+                ]
+            },
+            "icon-image": "Education sprites",
+            "text-field": "{name}",
+            "icon-anchor": "bottom",
+            "text-anchor": "top",
+            "text-offset": [
+                0,
+                0.8
+            ],
+            "text-overlap": "never",
+            "text-padding": 2,
+            "text-optional": true,
+            "text-max-width": 8,
+            "symbol-sort-key": [
+                "to-number",
+                [
+                    "get",
+                    "rank"
+                ]
+            ],
+            "visibility": "visible"
+        },
+        "paint": {
+            "icon-color": "hsl(175, 50%, 40%)",
+            "text-color": "hsl(175, 50%, 40%)",
+            "icon-opacity": [
+                "step",
+                [
+                    "zoom"
+                ],
+                0,
+                15,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        25
+                    ],
+                    1,
+                    0
+                ],
+                16,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        50
+                    ],
+                    1,
+                    0
+                ],
+                17,
+                1
+            ],
+            "text-opacity": [
+                "step",
+                [
+                    "zoom"
+                ],
+                0,
+                15,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        25
+                    ],
+                    1,
+                    0
+                ],
+                16,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        50
+                    ],
+                    1,
+                    0
+                ],
+                17,
+                1
+            ],
+            "icon-halo-blur": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                12,
+                1,
+                14,
+                0.5,
+                16,
+                0
+            ],
+            "text-halo-blur": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                12,
+                1,
+                14,
+                0.5,
+                16,
+                0
+            ],
+            "icon-halo-color": "hsl(0, 0%, 100%)",
+            "icon-halo-width": 2,
+            "text-halo-color": "hsl(0, 0%, 100%)",
+            "text-halo-width": 2
+        }
+    },
+    {
+        "id": "TL_Restaurant",
+        "type": "symbol",
+        "source": "v3-openmaptiles",
+        "source-layer": "poi",
+        "metadata": {},
+        "minzoom": 12,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "Point"
+            ],
+            [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "class"
+                    ],
+                    [
+                        "restaurant"
+                    ],
+                    true,
+                    [
+                        "college",
+                        "fuel",
+                        "grocery",
+                        "hospital",
+                        "school",
+                        "shop",
+                        "university"
+                    ],
+                    false,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    [
+                        "restaurant"
+                    ],
+                    true,
+                    [
+                        "college",
+                        "fuel",
+                        "hospital",
+                        "mall",
+                        "school",
+                        "supermarket",
+                        "university"
+                    ],
+                    false,
+                    false
+                ]
+            ]
+        ],
+        "layout": {
+            "icon-size": 1.25,
+            "text-font": [
+                "Roboto Regular",
+                "Noto Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        12,
+                        10
+                    ],
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        22,
+                        14
+                    ]
+                ]
+            },
+            "icon-image": "Eatery sprites",
+            "text-field": "{name}",
+            "icon-anchor": "bottom",
+            "text-anchor": "top",
+            "text-offset": [
+                0,
+                0.8
+            ],
+            "text-overlap": "never",
+            "text-padding": 2,
+            "text-optional": true,
+            "text-max-width": 8,
+            "symbol-sort-key": [
+                "to-number",
+                [
+                    "get",
+                    "rank"
+                ]
+            ],
+            "visibility": "visible"
+        },
+        "paint": {
+            "icon-color": "hsl(18, 24%, 44%)",
+            "text-color": "hsl(18, 24%, 44%)",
+            "icon-opacity": [
+                "step",
+                [
+                    "zoom"
+                ],
+                0,
+                14,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        10
+                    ],
+                    1,
+                    0
+                ],
+                15,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        20
+                    ],
+                    1,
+                    0
+                ],
+                16,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        99
+                    ],
+                    1,
+                    0
+                ],
+                18,
+                1
+            ],
+            "text-opacity": [
+                "step",
+                [
+                    "zoom"
+                ],
+                0,
+                14,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        10
+                    ],
+                    1,
+                    0
+                ],
+                15,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        20
+                    ],
+                    1,
+                    0
+                ],
+                16,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        99
+                    ],
+                    1,
+                    0
+                ],
+                17,
+                1
+            ],
+            "icon-halo-blur": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                12,
+                1,
+                14,
+                0.5,
+                16,
+                0
+            ],
+            "text-halo-blur": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                12,
+                1,
+                14,
+                0.5,
+                16,
+                0
+            ],
+            "icon-halo-color": "hsl(0, 0%, 100%)",
+            "icon-halo-width": 2,
+            "text-halo-color": "hsl(0, 0%, 100%)",
+            "text-halo-width": 2
+        }
+    },
+    {
+        "id": "TL_Healthcare",
+        "type": "symbol",
+        "source": "v3-openmaptiles",
+        "source-layer": "poi",
+        "metadata": {},
+        "minzoom": 12,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "Point"
+            ],
+            [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "class"
+                    ],
+                    [
+                        "hospital"
+                    ],
+                    true,
+                    [
+                        "college",
+                        "fuel",
+                        "grocery",
+                        "restaurant",
+                        "school",
+                        "shop",
+                        "university"
+                    ],
+                    false,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    [
+                        "hospital"
+                    ],
+                    true,
+                    [
+                        "college",
+                        "fuel",
+                        "mall",
+                        "restaurant",
+                        "school",
+                        "supermarket",
+                        "university"
+                    ],
+                    false,
+                    false
+                ]
+            ]
+        ],
+        "layout": {
+            "icon-size": 1.25,
+            "text-font": [
+                "Roboto Regular",
+                "Noto Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        12,
+                        10
+                    ],
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        22,
+                        14
+                    ]
+                ]
+            },
+            "icon-image": "Hospital1",
+            "text-field": "{name}",
+            "icon-anchor": "bottom",
+            "text-anchor": "top",
+            "text-offset": [
+                0,
+                0.8
+            ],
+            "text-overlap": "never",
+            "text-padding": 2,
+            "text-optional": true,
+            "text-max-width": 8,
+            "symbol-sort-key": [
+                "to-number",
+                [
+                    "get",
+                    "rank"
+                ]
+            ],
+            "visibility": "visible"
+        },
+        "paint": {
+            "icon-color": "hsl(6, 96%, 35%)",
+            "text-color": "hsl(6, 96%, 35%)",
+            "icon-opacity": [
+                "step",
+                [
+                    "zoom"
+                ],
+                0,
+                14,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        5
+                    ],
+                    1,
+                    0
+                ],
+                15,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        10
+                    ],
+                    1,
+                    0
+                ],
+                16,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        30
+                    ],
+                    1,
+                    0
+                ],
+                17,
+                1
+            ],
+            "text-opacity": [
+                "step",
+                [
+                    "zoom"
+                ],
+                0,
+                14,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        10
+                    ],
+                    1,
+                    0
+                ],
+                15,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        20
+                    ],
+                    1,
+                    0
+                ],
+                16,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        30
+                    ],
+                    1,
+                    0
+                ],
+                17,
+                1
+            ],
+            "icon-halo-blur": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                12,
+                1,
+                14,
+                0.5,
+                16,
+                0
+            ],
+            "text-halo-blur": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                12,
+                1,
+                14,
+                0.5,
+                16,
+                0
+            ],
+            "icon-halo-color": "hsl(0, 0%, 100%)",
+            "icon-halo-width": 2,
+            "text-halo-color": "hsl(0, 0%, 100%)",
+            "text-halo-width": 2
+        }
+    },
+    {
+        "id": "TL_Supermarkets",
+        "type": "symbol",
+        "source": "v3-openmaptiles",
+        "source-layer": "poi",
+        "minzoom": 12,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "Point"
+            ],
+            [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "class"
+                    ],
+                    [
+                        "grocery"
+                    ],
+                    true,
+                    [
+                        "shop"
+                    ],
+                    false,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    [
+                        "supermarket"
+                    ],
+                    true,
+                    [
+                        "mall"
+                    ],
+                    false,
+                    false
+                ]
+            ]
+        ],
+        "layout": {
+            "icon-size": 1.25,
+            "text-font": [
+                "Roboto Regular",
+                "Noto Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        12,
+                        10
+                    ],
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        22,
+                        14
+                    ]
+                ]
+            },
+            "icon-image": "Supermarket sprites",
+            "text-field": "{name}",
+            "icon-anchor": "bottom",
+            "text-anchor": "top",
+            "text-offset": [
+                0,
+                0.8
+            ],
+            "text-overlap": "never",
+            "text-padding": 2,
+            "text-optional": true,
+            "text-max-width": 8,
+            "symbol-sort-key": [
+                "to-number",
+                [
+                    "get",
+                    "rank"
+                ]
+            ],
+            "visibility": "visible"
+        },
+        "paint": {
+            "icon-color": "hsl(18, 17%, 30%)",
+            "text-color": "hsl(186, 100%, 9%)",
+            "icon-opacity": [
+                "step",
+                [
+                    "zoom"
+                ],
+                0,
+                14,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        10
+                    ],
+                    1,
+                    0
+                ],
+                15,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        25
+                    ],
+                    1,
+                    0
+                ],
+                16,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        99
+                    ],
+                    1,
+                    0
+                ],
+                17,
+                1
+            ],
+            "text-opacity": [
+                "step",
+                [
+                    "zoom"
+                ],
+                0,
+                14,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        10
+                    ],
+                    1,
+                    0
+                ],
+                15,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        25
+                    ],
+                    1,
+                    0
+                ],
+                16,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        99
+                    ],
+                    1,
+                    0
+                ],
+                17,
+                1
+            ],
+            "icon-halo-blur": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                12,
+                1,
+                14,
+                0.5,
+                16,
+                0
+            ],
+            "text-halo-blur": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                12,
+                1,
+                14,
+                0.5,
+                16,
+                0
+            ],
+            "icon-halo-color": "hsl(0, 0%, 100%)",
+            "icon-halo-width": 2,
+            "text-halo-color": "hsl(0, 0%, 100%)",
+            "text-halo-width": 2
+        }
+    },
+    {
+        "id": "TL_Malls",
+        "type": "symbol",
+        "source": "v3-openmaptiles",
+        "source-layer": "poi",
+        "minzoom": 12,
+        "maxzoom": 22,
+        "filter": [
+            "all",
+            [
+                "==",
+                [
+                    "geometry-type"
+                ],
+                "Point"
+            ],
+            [
+                "all",
+                [
+                    "match",
+                    [
+                        "get",
+                        "class"
+                    ],
+                    [
+                        "shop"
+                    ],
+                    true,
+                    false
+                ],
+                [
+                    "match",
+                    [
+                        "get",
+                        "subclass"
+                    ],
+                    [
+                        "mall"
+                    ],
+                    true,
+                    false
+                ]
+            ]
+        ],
+        "layout": {
+            "icon-size": 1.25,
+            "text-font": [
+                "Roboto Regular",
+                "Noto Sans Regular"
+            ],
+            "text-size": {
+                "stops": [
+                    [
+                        12,
+                        10
+                    ],
+                    [
+                        16,
+                        12
+                    ],
+                    [
+                        22,
+                        14
+                    ]
+                ]
+            },
+            "icon-image": "Malls sprites",
+            "text-field": "{name}",
+            "icon-anchor": "bottom",
+            "text-anchor": "top",
+            "text-offset": [
+                0,
+                0.8
+            ],
+            "text-overlap": "never",
+            "text-padding": 2,
+            "text-optional": true,
+            "text-max-width": 8,
+            "symbol-sort-key": [
+                "to-number",
+                [
+                    "get",
+                    "rank"
+                ]
+            ],
+            "visibility": "visible"
+        },
+        "paint": {
+            "icon-color": "hsl(18, 17%, 30%)",
+            "text-color": "hsl(18, 17%, 30%)",
+            "icon-opacity": [
+                "step",
+                [
+                    "zoom"
+                ],
+                0,
+                14,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        10
+                    ],
+                    1,
+                    0
+                ],
+                15,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        25
+                    ],
+                    1,
+                    0
+                ],
+                16,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        99
+                    ],
+                    1,
+                    0
+                ],
+                17,
+                1
+            ],
+            "text-opacity": [
+                "step",
+                [
+                    "zoom"
+                ],
+                0,
+                14,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        10
+                    ],
+                    1,
+                    0
+                ],
+                15,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        25
+                    ],
+                    1,
+                    0
+                ],
+                16,
+                [
+                    "case",
+                    [
+                        "<=",
+                        [
+                            "get",
+                            "rank"
+                        ],
+                        99
+                    ],
+                    1,
+                    0
+                ],
+                17,
+                1
+            ],
+            "icon-halo-blur": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                12,
+                1,
+                14,
+                0.5,
+                16,
+                0
+            ],
+            "text-halo-blur": [
+                "interpolate",
+                [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                12,
+                1,
+                14,
+                0.5,
+                16,
+                0
+            ],
+            "icon-halo-color": "hsl(0, 0%, 100%)",
+            "icon-halo-width": 2,
+            "text-halo-color": "hsl(0, 0%, 100%)",
+            "text-halo-width": 2
+        }
+    }
+]
